@@ -23,6 +23,9 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.material3.ButtonDefaults
+
+
 
 
 class MainActivity : ComponentActivity() {
@@ -45,7 +48,13 @@ class MainActivity : ComponentActivity() {
 
                                 modifier = Modifier
                                 .padding(16.dp)
-                                .fillMaxWidth(0.6f))
+                                .fillMaxWidth(0.6f),
+
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color.DarkGray,
+                                contentColor = Color.White
+                            )
+                        )
                         {
 
                             Text(
@@ -54,7 +63,7 @@ class MainActivity : ComponentActivity() {
 
 
                         }
-                        Spacer(modifier = Modifier.fillMaxSize(0.2f))
+                        Spacer(modifier = Modifier.height(24.dp))
                         Text(
                             text = teksti,
                                     modifier = Modifier
